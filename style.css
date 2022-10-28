@@ -1,0 +1,511 @@
+:root {
+  /* Primary */
+
+  --pink: hsl(322, 100%, 66%);
+
+  /* Neutral */
+
+  --veryPaleCyan: hsl(193, 100%, 96%);
+  --veryDarkCyan: hsl(192, 100%, 9%);
+  --grayishBlue: hsl(208, 11%, 55%);
+
+  /* Typography */
+
+  --ff-open-sans: "Open Sans", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --fs-body: clamp(16px, 4vw, 18px);
+  --fs-body-sm: clamp(14px, 3vw, 16px);
+  --fs-body-med: clamp(14px, 3vw, 18px);
+  --fs-h1: clamp(26px, 5vw, 40px);
+  --fs-h2: clamp(20px, 4vw, 26px);
+  --fs-h3: clamp(18px, 3vw, 30px);
+  --fs-button: clamp(12px, 1vw, 14px);
+
+  --lh-body: 1.5;
+  --lh-title: 1.3;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  transition: all ease 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-open-sans);
+  font-weight: var(--fw-400);
+  background-image: url(/images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--veryPaleCyan);
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+small {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: var(--fs-button);
+}
+
+/* LAYOUT HELPER CLASSES */
+
+.bs-grey {
+  box-shadow: 0rem 0rem 1.5rem rgba(102, 108, 163, 0.2);
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+.br-15 {
+  border-radius: 15px;
+}
+
+.p-inline {
+  padding: 25px 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.bg-white {
+  background-color: white;
+  padding-bottom: 180px;
+}
+
+.bg-dark {
+  background-color: var(--veryDarkCyan);
+  padding-top: 50px;
+}
+
+/* FLEX HELPER CLASSES */
+
+.flex {
+  display: flex;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-c {
+  justify-content: center;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+
+.logo-header {
+  width: 110px;
+}
+
+.btn-white {
+  font-family: var(--ff-open-sans);
+  font-weight: var(--fw-700);
+  padding: 5px 20px;
+  background: white;
+}
+
+/* HERO */
+/* HERO */
+/* HERO */
+
+.hero {
+  margin-top: 40px;
+}
+
+.hero-txt {
+  padding: 0 18px;
+  text-align: center;
+}
+
+.hero-txt h1 {
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-600);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-body);
+  padding-bottom: 25px;
+}
+
+.hero-txt p {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  padding-bottom: 25px;
+}
+
+.btn-pink {
+  font-family: var(--ff-open-sans);
+  font-weight: var(--fw-700);
+  color: var(--veryPaleCyan);
+  padding: 10px 55px;
+  background: var(--pink);
+  margin-bottom: 30px;
+}
+
+.hero-img {
+  padding: 15px;
+}
+
+/* SPECS */
+/* SPECS */
+/* SPECS */
+
+.card-grid,
+.hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.specs-card {
+  background-color: white;
+  padding: 35px;
+  text-align: center;
+  margin-top: 35px;
+  height: fit-content;
+}
+
+.specs-card-img {
+  padding: 20px 15px 45px;
+}
+
+.specs-card-txt h2 {
+  font-family: var(--ff-poppins);
+  font-size: var(--fs-h2);
+  padding-bottom: 20px;
+}
+
+.specs-card-txt p {
+  font-size: var(--fs-body-sm);
+  line-height: var(--lh-body);
+  color: var(--grayishBlue);
+}
+
+/* CARD READY */
+/* CARD READY */
+/* CARD READY */
+
+.card-ready {
+  text-align: center;
+  width: clamp(350px, 70vw, 800px);
+  margin: 0 auto;
+  transform: translateY(-150px);
+  padding: 40px 10px 30px;
+}
+
+.card-ready h3 {
+  font-size: var(--fs-h3);
+  font-family: var(--ff-poppins);
+  color: var(--veryDarkCyan);
+  padding-bottom: 25px;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+
+.footer {
+  color: white;
+}
+
+.logo-footer {
+  width: 180px;
+  margin-top: -50px;
+}
+
+.footer-info {
+  align-items: flex-start;
+}
+
+.footer-info-icon {
+  width: 15px;
+  margin-right: 25px;
+  margin-top: 5px;
+}
+
+.footer-navigation li {
+  padding-bottom: 10px;
+}
+
+.footer-social {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.footer-social-icons {
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.social-icon {
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 1.875rem;
+  width: 1.875rem;
+  cursor: pointer;
+  margin: 6px;
+}
+
+.social-wrapper small {
+  text-align: center;
+  font-family: var(--ff-poppins);
+  font-size: 10px;
+  padding: 25px 0 50px;
+}
+
+/* TABLET STYLES */
+
+@media (min-width: 768px) {
+  .p-inline {
+    margin: 50px 50px;
+  }
+
+  .logo-header {
+    width: 200px;
+  }
+
+  .btn-white {
+    padding: 13px 65px 15px;
+  }
+
+  .hero-txt {
+    padding: 60px;
+  }
+
+  .hero-txt h1 {
+    line-height: var(--lh-title);
+  }
+
+  .btn-pink {
+    margin-top: 10px;
+    padding: 18px 70px;
+  }
+
+  .switch {
+    order: +1;
+  }
+
+  .no-switch {
+    grid-template-columns: 45% 55%;
+    gap: 40px;
+  }
+
+  .specs-card .no-switch-txt {
+    padding-right: 40px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .specs-card-txt {
+    text-align: start;
+  }
+
+  .specs-card-txt h2 {
+    font-size: 20px;
+  }
+
+  .logo-footer {
+    width: 250px;
+    padding-bottom: 50px;
+  }
+
+  .footer {
+    padding: 0 50px 0 50px;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .social-wrapper {
+    grid-column: 1 / span 3;
+    justify-content: center;
+  }
+
+  .footer-social-icons {
+    padding-top: 0px;
+  }
+}
+
+/* SMALL SCREENS */
+
+@media (min-width: 1024px) {
+  .p-desk {
+    padding: 30px 50px;
+  }
+
+  .no-pad {
+    padding: 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-txt {
+    text-align: start;
+  }
+
+  .specs-card-txt {
+    padding: 30px;
+  }
+}
+
+/* MEDIUM SCREENS */
+
+@media (min-width: 1400px) {
+  .p-inline {
+    margin: px 80px;
+  }
+
+  .switch {
+    order: +1;
+  }
+
+  .hero-grid {
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 40px;
+  }
+
+  .hero-txt {
+    grid-column: 1 / span 2;
+  }
+
+  .hero-img {
+    grid-column: 3 / span 3;
+  }
+
+  .card-grid {
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .specs-card-txt {
+    padding: 80px;
+  }
+
+  .specs-card-txt h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .specs-card-txt p {
+    font-size: var(--fs-body-med);
+  }
+
+  .switch-img {
+    padding-right: 50px;
+  }
+
+  .card-ready h3 {
+    padding-top: 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+  }
+
+  .footer-social {
+    justify-content: space-between;
+  }
+
+  .social-wrapper {
+    grid-column: 4;
+    justify-content: flex-start;
+  }
+}
+
+/* LARGE SCREENS */
+
+@media (min-width: 1700px) {
+  .p-inline {
+    margin: 25px 270px;
+  }
+
+  .p-desk {
+    padding: 30px 270px;
+  }
+}
