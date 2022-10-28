@@ -127,6 +127,7 @@ button {
 .bg-white {
   background-color: white;
   padding-bottom: 180px;
+  -webkit-text-fill-color: var(--veryDarkCyan);
 }
 
 .bg-dark {
